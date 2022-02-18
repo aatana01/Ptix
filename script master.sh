@@ -30,7 +30,7 @@ sudo apt-get install luarocks
 
 sudo luarocks install luasocket
 #$eval $(luarocks path --bin) not needed
-git clone https://github.com/delimitrou/DeathStarBench.git
+#git clone https://github.com/delimitrou/DeathStarBench.git
 
 #add master node
 sudo docker swarm init --advertise-addr 10.10.1.1
