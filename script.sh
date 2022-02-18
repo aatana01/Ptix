@@ -1,6 +1,5 @@
-#!/bin/bash
+#!/bin/bash 
 
- hostname  > file
-
+hostname  > file
 $var=`cat file `
 echo $var
