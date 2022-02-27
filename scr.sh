@@ -2,10 +2,10 @@
 
 for (( i=0 ; i<$1 ; i++ )); 
 do
-    if [ $i=0 ]; then
+	
+    if [ $i -eq 0 ]; then
 	chmod +x scr_master.sh
-	cat scr_master.sh
-	#yes Y|./scr_master.sh
+	yes Y|./scr_master.sh
 	#variable=`cat file |  grep "docker swarm join --token"`
 else
 	echo "Worker now"
