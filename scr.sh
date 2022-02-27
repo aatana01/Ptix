@@ -6,15 +6,15 @@ do
     if [ $i -eq 0 ]; then
 	chmod +x scr_master.sh
 	yes Y|./scr_master.sh
-	#variable=`cat file |  grep "docker swarm join --token"`
+	variable=`cat file |  grep "docker swarm join --token"`
 else
 	echo "Worker now"
-	#yes Y|ssh node$i
-	#git clone https://github.com/aatana01/Ptix.git
-	#cd Ptix
-	#chmod +x scr_work.sh
-	#yes Y|./scr_work.sh
-	#$variable
+	yes Y|ssh node$i
+	git clone https://github.com/aatana01/Ptix.git
+	cd Ptix
+	chmod +x scr_work.sh
+	yes Y|./scr_work.sh
+	$variable
 fi
 done
 #yes Y|ssh node0
