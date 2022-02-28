@@ -9,12 +9,13 @@ do
 	variable=`cat file |  grep "docker swarm join --token"`
 else
 	echo "Worker now"
-	yes Y|ssh node$i
-	#git clone https://github.com/aatana01/Ptix.git
-	#cd Ptix
-	#chmod +x scr_work.sh
-	#yes Y|./scr_work.sh
-	#$variable
+	ssh -o "StrictHostKeyChecking no"  -A node$i
+	git clone https://github.com/aatana01/Ptix.git
+	cd Ptix
+	chmod +x scr_work.sh
+	yes Y|./scr_work.sh
+	$variable
+	exit
 fi
 done
 #yes Y|ssh node0
