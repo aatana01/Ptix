@@ -16,7 +16,7 @@ else
 	yes Y|./scr_work.sh
 	sudo$variable
 EOT
-	exit
+	
 	
 fi
 done
