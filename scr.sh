@@ -6,9 +6,9 @@ do
     if [ $i -eq 0 ]; then
 	chmod +x scr_master.sh
 	yes Y|./scr_master.sh
-	echo $variable=`cat file |  grep "docker swarm join --token"`
+	variable=`cat file |  grep "docker swarm join --token"`
 else
-	echo "Worker now"
+	
 	ssh -o "StrictHostKeyChecking no"  -A node$i<<EOT
 	git clone https://github.com/aatana01/Ptix.git
 	cd Ptix
