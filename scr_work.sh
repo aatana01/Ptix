@@ -12,7 +12,7 @@ sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install python3.9
 
-#sudo apt-get install python3-pip python-dev
+sudo apt-get install python3-pip python-dev
 
 pip3 install asyncio
 pip3 install aiohttp
