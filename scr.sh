@@ -30,6 +30,6 @@ sudo docker stack deploy --compose-file=docker-compose-swarm.yml SocialNetwork
 #EOT
 #cd Ptix
 
-python3 scripts/init_social_graph.py --graph=socfb-Reed98
-cd wrk2
-make
+#python3 scripts/init_social_graph.py --graph=socfb-Reed98
+#cd wrk2
+#make
