@@ -21,7 +21,7 @@ EOT
 fi
 done
 sudo docker stack deploy --compose-file=docker-compose-swarm.yml SocialNetwork
-#ssh -o "StrictHostKeyChecking no"  -A node$1<<EOT
+#ssh -o "StrictHostKeyChecking no"  -A node$i<<EOT
 #	git clone https://github.com/aatana01/Ptix.git
 #	cd Ptix
 #	chmod +x scr_work.sh
