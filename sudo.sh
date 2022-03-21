@@ -1,5 +1,4 @@
 #!/bin/bash
-rm file
 for (( i=0 ; i<$1 ; i++ ));
 do
         sleep 2
