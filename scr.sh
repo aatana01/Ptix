@@ -9,7 +9,7 @@ do
 	variable=`cat file |  grep "docker swarm join --token"`
 else
 	
-	ssh -o "StrictHostKeyChecking no"  -A node$i<<EOT
+	ssh node$i<<EOT
 	git clone https://github.com/aatana01/Ptix.git
 	cd Ptix
 	chmod +x scr_work.sh
@@ -22,18 +22,18 @@ fi
 done
 sudo docker stack deploy --compose-file=docker-compose-swarm.yml SocialNetwork
 
-ssh  node$i
-git clone https://github.com/aatana01/Ptix.git
-cd Ptix
-chmod +x scr_work.sh
-yes Y|./scr_work.sh
-sudo$variable
+ssh  node$i "git clone https://github.com/aatana01/Ptix.git;
+cd Ptix;
+chmod +x scr_work.sh;
+yes Y|./scr_work.sh;
+sudo$variable;
+python3 scripts/init_social_graph.py --graph=socfb-Reed98;
+cd wrk2;
+make;
+git clone https://github.com/hvolos/profiler.git"
 
-cd Ptix
-python3 scripts/init_social_graph.py --graph=socfb-Reed98
-cd wrk2
-make
-#git clone https://github.com/hvolos/profiler.git
+
+
 #for (( c=0 ; c<$1 ; c++ )); 
 #do	
 #done
