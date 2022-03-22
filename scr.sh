@@ -28,10 +28,8 @@ chmod +x scr_work.sh;
 yes Y|./scr_work.sh;
 sudo$variable;
 git clone https://github.com/hvolos/profiler.git;
-cd profiler;
 chmod +x pstate.sh;
-chmod +x turbo_rm.sh;
-cd .."
+chmod +x turbo_rm.sh"
 #python3 scripts/init_social_graph.py --graph=socfb-Reed98;
 #cd wrk2;
 #make;
