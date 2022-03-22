@@ -27,10 +27,10 @@ cd Ptix;
 chmod +x scr_work.sh;
 yes Y|./scr_work.sh;
 sudo$variable;
-python3 scripts/init_social_graph.py --graph=socfb-Reed98;
-cd wrk2;
-make;
-git clone https://github.com/hvolos/profiler.git"
+#python3 scripts/init_social_graph.py --graph=socfb-Reed98;
+#cd wrk2;
+#make;
+#git clone https://github.com/hvolos/profiler.git"
 
 
 
