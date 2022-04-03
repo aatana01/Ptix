@@ -8,7 +8,7 @@
     "bufferFlushInterval": 10
   },
   "sampler": {
-    "type": const,
-    "param": 0
+    "type": "const",
+    "param": "0"
   }
 }
