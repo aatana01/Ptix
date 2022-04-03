@@ -9,6 +9,6 @@
   },
   "sampler": {
     "type": "const",
-    "param": "0"
+    "param": "1"
   }
 }
