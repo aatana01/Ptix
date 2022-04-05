@@ -76,7 +76,7 @@ def printResults(results):
 async def register(addr, nodes):
   tasks = []
   conn = aiohttp.TCPConnector(limit=200)
-  async with aiohttp.ClientSession(connector=conn,trust_env=True) as session:
+  async with aiohttp.ClientSession(connector=conn) as session:
     print('Registering Users...')
     for i in range(nodes):
       task = asyncio.ensure_future(upload_register(session, addr, str(i)))
@@ -92,7 +92,7 @@ async def follow(addr, edges):
   idx = 0
   tasks = []
   conn = aiohttp.TCPConnector(limit=200)
-  async with aiohttp.ClientSession(connector=conn,trust_env=True) as session:
+  async with aiohttp.ClientSession(connector=conn) as session:
     print('Adding follows...')
     for edge in edges:
       task = asyncio.ensure_future(
@@ -113,7 +113,7 @@ async def compose(addr, nodes):
   idx = 0
   tasks = []
   conn = aiohttp.TCPConnector(limit=200)
-  async with aiohttp.ClientSession(connector=conn,trust_env=True) as session:
+  async with aiohttp.ClientSession(connector=conn) as session:
     print('Composing posts...')
     for i in range(nodes):
       for _ in range(random.randint(0, 20)):  # up to 20 posts per user, average 10
