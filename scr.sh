@@ -20,7 +20,7 @@ EOT
 	
 fi
 done
-sudo docker stack deploy --compose-file=docker-compose-swarm.yml SocialNetwork
+#sudo docker stack deploy --compose-file=docker-compose-swarm.yml SocialNetwork
 
 ssh  node$i "git clone https://github.com/aatana01/Ptix.git;
 cd Ptix;
