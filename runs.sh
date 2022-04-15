@@ -5,7 +5,7 @@ chmod +x sudo.sh
 o=$1
 #for (( c=0 ; c<$1 ; c++ ));
 #do
-                python3 ./profiler/profiler.py -n node$c start
+               # python3 ./profiler/profiler.py -n node$c start
 #done
 for (( c=100 ; c<500 ; c+=100 ));
 do
