@@ -1,3 +1,4 @@
+
 version: "3.8"
 
 services:
@@ -142,6 +143,8 @@ services:
       - jaeger-agent
       - jaeger-query
     deploy:
+      placement:
+        constraints: [node.hostname == node1.aatana01-123692.ucy-cs499-dc-pg0.wisc.cloudlab.us]
       replicas: 1
       restart_policy:
         condition: any
@@ -448,6 +451,8 @@ services:
     ports:
       - "14269:14269"
     deploy:
+      placement:
+        constraints: [node.hostname == node0.aatana01-123692.ucy-cs499-dc-pg0.wisc.cloudlab.us]
       restart_policy:
         condition: any
     depends_on:
@@ -476,6 +481,8 @@ services:
   cassandra:
     image: cassandra:3.9
     deploy:
+      placement:
+        constraints: [node.hostname == node0.aatana01-123692.ucy-cs499-dc-pg0.wisc.cloudlab.us]
 
 networks:
   default:
@@ -484,3 +491,4 @@ networks:
       driver: default
       config:
         - subnet: 10.11.0.0/16
+
