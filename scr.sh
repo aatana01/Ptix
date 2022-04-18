@@ -22,14 +22,11 @@ fi
 done
 sudo docker stack deploy --compose-file=docker-compose-swarm.yml SocialNetwork
 
-ssh  node$i "git clone https://github.com/aatana01/Ptix.git;
-cd Ptix;
+ssh  node$i "cd Ptix;
 chmod +x scr_work.sh;
 yes Y|./scr_work.sh;
 sudo$variable;
-git clone https://github.com/hvolos/profiler.git;
-chmod +x pstate.sh;
-chmod +x turbo_rm.sh"
+git clone https://github.com/hvolos/profiler.git"
 #python3 scripts/init_social_graph.py --graph=socfb-Reed98;
 #cd wrk2;
 #make;
