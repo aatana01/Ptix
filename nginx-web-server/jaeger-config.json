@@ -8,7 +8,7 @@
     "bufferFlushInterval": 10
   },
   "sampler": {
-    "type": "probabilistic",
-    "param": 0.2
+    "type": "const",
+    "param": 1
   }
 }
