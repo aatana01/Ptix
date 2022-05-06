@@ -1,26 +1,23 @@
 
 
 #!/bin/bash
-chmod +x sudo.sh
 o=$1
-#for (( c=0 ; c<$1 ; c++ ));
-#do
-               # python3 ./profiler/profiler.py -n node$c start
-#done
-for (( c=100 ; c<500 ; c+=100 ));
+for (( c=0 ; c<$1 ; c++ ));
 do
-        echo $c>>file
-        ./wrk2/wrk -D exp -t 2 -c 2 -d 60 -L -s ./wrk2/scripts/social-network/mixed-workload.lua http://localhost:8080/wrk2-api/post/compose -R $c>>file1
-
+                python3 ./profiler/profiler.py -n node$c start
 done
-#for (( c=0 ; c<$1 ; c++ ));
-#do
-#                python3 ./profiler/profiler.py -n node$c stop
-#done
-#for (( c=0 ; c<$1 ; c++ ));
-#do
-#                python3 ./profiler/profiler.py -n node$c report -d /tmp/data>>profilefile
-#done
+        
+        ./wrk2/wrk -D exp -t 2 -c 2 -d 60 -L -s ./wrk2/scripts/social-network/mixed-workload.lua http://localhost:8080/wrk2-api/post/compose -R $2 >> file1
+
+
+for (( c=0 ; c<$1 ; c++ ));
+do
+                python3 ./profiler/profiler.py -n node$c stop
+done
+for (( c=0 ; c<$1 ; c++ ));
+do
+               python3 ./profiler/profiler.py -n node$c report -d /data
+done
 
 
 
