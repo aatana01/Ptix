@@ -16,7 +16,7 @@ do
 done
 for (( c=0 ; c<$1 ; c++ ));
 do
-               python3 ./profiler/profiler.py -n node$c report -d /data/node$c
+               python3 ./profiler/profiler.py -n node$c report -d /tmp/data/node$c
 done
 
 
